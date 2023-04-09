@@ -57,10 +57,6 @@ li {
   list-style: none;
 }
 
-h3:first-letter {
-  text-transform: capitalize;
-}
-
 .footer {
   text-align: center;
   margin-left: 20px;

@@ -23,7 +23,7 @@ if (currentMinute < 10) {
   currentMinute = `0${currentMinute}`;
 }
 
-dayTime.innerHTML = `${currentDay} ${currentHour}:${currentMinute}`;
+dayTime.innerHTML = `Last updated: ${currentDay} ${currentHour}:${currentMinute}`;
 
 function currentCity(event) {
   event.preventDefault();
@@ -58,6 +58,12 @@ function showTemperature(response) {
 
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = `${response.data.main.humidity}%<br><strong>Humidity</strong>`;
+
+  let weatherIcon = document.querySelector("#icon");
+  weatherIcon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function findCityOfButton(city) {

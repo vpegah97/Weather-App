@@ -45,6 +45,9 @@ function showTemperature(response) {
 
   let description = document.querySelector("#description");
   description.innerHTML = `${response.data.weather[0].description}`;
+  description.innerHTML =
+    description.innerHTML.charAt(0).toUpperCase() +
+    description.innerHTML.slice(1);
 
   let tempMax = document.querySelector("#tempMax");
   tempMax.innerHTML = `${Math.round(

@@ -84,3 +84,5 @@ function submitCity(event) {
 
 let submitCityOfButton = document.querySelector("form");
 submitCityOfButton.addEventListener("submit", submitCity);
+
+findCityOfButton("London");
